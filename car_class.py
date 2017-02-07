@@ -23,4 +23,4 @@ class Car(object):
             self.speed = 1000
         elif n == 7:
             self.speed = 77
-        return self.speed
+        return self
