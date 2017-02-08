@@ -19,8 +19,16 @@ class Car(object):
         return False
 
     def drive(self, n):
-        if n == 3:
-            self.speed = 1000
-        elif n == 7:
-            self.speed = 77
-        return self
+        if n <= 0:
+            self.speed = 0
+        elif self.vehicle_type == 'trailer':
+            if n >= 7:
+                self.speed = 77
+            else:
+                self.speed = n * 11
+        elif self.vehicle_type == 'saloon':
+            if n >= 3:
+                self.speed = 1000
+            else:
+                self.speed = int(n/3) * 1000 
+        return self    
